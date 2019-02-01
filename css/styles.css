@@ -48,6 +48,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
+  margin-top: 10px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
@@ -58,9 +59,11 @@ nav {
   height: 5em;
   background-color: #252831;
   text-align:center;
+  display: flex;
 }
 nav h1 {
   margin: auto;
+  width: 320px;
 }
 nav h1 a {
   color: #fff;
@@ -74,8 +77,7 @@ nav h1 a {
     list-style: none;
     background-color: #eee;
     font-size: 17px;
-    margin: 0;
-    width: calc(50% - 80px);
+    /* width: calc(50% - 80px); */
 }
 
 /* Display list items side by side */
@@ -121,17 +123,17 @@ nav h1 a {
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  margin-bottom: 10px;
   padding-top: 5px;
 }
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
+  border-radius: 5px;
   font-family: Arial,sans-serif;
   font-size: 11pt;
   height: 35px;
-  letter-spacing: 0;
-  margin: 10px;
+  margin-bottom: 10px;
   padding: 0 10px;
   width: 200px;
 }
@@ -149,11 +151,11 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
+  margin-top: 10px;
   min-height: 380px;
-  padding: 0 30px 25px;
+  padding: 0 30px 15px;
   text-align: left;
-  width: 270px;
+  width: 80%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -181,10 +183,8 @@ nav h1 a {
   color: #fff;
   display: inline-block;
   font-size: 10pt;
-  margin: 15px 0 0;
-  padding: 8px 30px 10px;
-  text-align: center;
-  text-decoration: none;
+  margin-top: 15px;
+  padding: 10px 30px;
   text-transform: uppercase;
 }
 
