@@ -190,9 +190,8 @@ nav h1 a {
   grid-template-rows: 50vh auto auto;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
   grid-column: 1 / 2;
-  grid-row: 1/ 2;
+  grid-row: 1 / 2;
 }
 .inside #map {
   background-color: #ccc;
@@ -203,10 +202,12 @@ nav h1 a {
 }
 #restaurant-container {
   grid-column: 1 / 2;
-  grid-row: 2/ 3;
+  grid-row: 2 / 3;
 }
 #restaurant-img {
-	width: 100%;
+  max-width: 100%;
+  min-height: 248px;
+  min-width: 100%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -233,7 +234,7 @@ nav h1 a {
 }
 #restaurant-name, #reviews-container h2 {
   color: #f58500;
-  font-size: 20px;
+  font-size: 20pt;
   font-weight: 300;
 }
 #reviews-list li {
@@ -250,6 +251,66 @@ nav h1 a {
   color: #666;
 }
 
+/* ======================== Responsive design ======================== */
+@media screen and (min-width: 768px){
+  #maincontent {
+    width: 700px;
+    margin: 0 auto;
+  }
 
+}
 
-/* Responsive design */
+@media screen and (min-width: 959px){
+  #maincontent{
+    width: 900px;
+  }
+  #restaurants-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #restaurants-list li {
+    width: 90%;
+  }
+  .inside #maincontent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh auto;
+  }
+  .inside #map-container {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  #restaurant-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+  }
+  #reviews-container {
+    grid-column: 2 / 3;
+    grid-row: 2/ 3;
+  }
+}
+
+@media  screen and (min-width: 1280px){
+  #maincontent{
+    width: 1200px;
+  }
+  .inside #maincontent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh auto;
+  }
+  .inside #map-container {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+  }
+  #restaurant-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+  }
+  #reviews-container {
+    grid-column: 2 / 3;
+    grid-row: 2/ 3;
+  }
+}
