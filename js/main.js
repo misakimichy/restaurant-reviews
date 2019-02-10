@@ -8,6 +8,16 @@ var markers = []
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+  // register service worker
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js'
+    ).catch(registration => {
+      console.log('Service worker is registered');
+    }).catch(error => {
+      console.log('Service worker registration failed');
+    });
+  }
+
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
@@ -186,14 +196,4 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
-    });
-    self.markers.push(marker);
-  });
-} */
 
