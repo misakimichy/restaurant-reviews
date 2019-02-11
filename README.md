@@ -12,7 +12,7 @@ This is the final project of Front-End Web Developer Nanodegree Program at Udaci
 I completed this project following Udacity's requirements [rubric](https://review.udacity.com/#!/rubrics/1090/view) and provided [code](https://github.com/udacity/mws-restaurant-stage-1).
 
 ## Feature
-![Screenshot of app](screen-shot.png)
+![Screenshot of app](img/screen-shot.png)
 
 - Made with **responsible design** to ensure great user experience for any devices
 - **Offline application** with restaurant information, customer reviews and review form 
@@ -24,7 +24,7 @@ I completed this project following Udacity's requirements [rubric](https://revie
 ```
 https://github.com/misakimichy/restaurant-reviews.git
 ```
-2. Run server  via terminal:
+2. Run server  via terminal:<br>
 For Python version 2:
 ```
 python -m SimpleHTTPServer 8000
