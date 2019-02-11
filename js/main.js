@@ -8,16 +8,6 @@ var markers = []
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  // register service worker
-  // if('serviceWorker' in navigator) {
-  //   navigator.serviceWorker.register('/sw.js'
-  //   ).then(registration => {
-  //     console.log('Service worker is registered');
-  //   }).catch(error => {
-  //     console.log('Service worker registration failed');
-  //   });
-  // }
-
   initMap(); // added 
   fetchNeighborhoods();
   fetchCuisines();
@@ -28,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
  */
 fetchNeighborhoods = () => {
   DBHelper.fetchNeighborhoods((error, neighborhoods) => {
-    if (error) { // Got an error
+    if (error) {
       console.error(error);
     } else {
       self.neighborhoods = neighborhoods;
