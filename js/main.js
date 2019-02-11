@@ -9,14 +9,14 @@ var markers = []
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   // register service worker
-  if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js'
-    ).catch(registration => {
-      console.log('Service worker is registered');
-    }).catch(error => {
-      console.log('Service worker registration failed');
-    });
-  }
+  // if('serviceWorker' in navigator) {
+  //   navigator.serviceWorker.register('/sw.js'
+  //   ).then(registration => {
+  //     console.log('Service worker is registered');
+  //   }).catch(error => {
+  //     console.log('Service worker registration failed');
+  //   });
+  // }
 
   initMap(); // added 
   fetchNeighborhoods();
