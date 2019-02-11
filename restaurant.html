@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   <head>
     <!-- Normalize.css for better cross-browser consistency -->
@@ -14,7 +14,7 @@
 
   <body class="inside">
     <header>
-      <nav>
+      <nav role="navigation">
         <h1><a href="/" aria-label="Home">Restaurant Reviews</a></h1>
       </nav>
       <ul id="breadcrumb" aria-label="Breadcrumb">
@@ -24,7 +24,7 @@
 
     <main id="maincontent">
       <section id="map-container">
-        <div id="map"></div>
+        <div id="map" role="application" aria-label="Restaurant map"></div>
       </section>
       <section id="restaurant-container">
         <h1 id="restaurant-name"></h1>
